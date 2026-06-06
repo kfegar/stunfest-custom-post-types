@@ -7,6 +7,7 @@ class Plugin {
     /** @var array<class-string> */
     private array $post_types = [
         PostTypes\EvenementPostType::class,
+        PostTypes\IndieGamePostType::class,
     ];
 
     /** @var array<class-string> */
@@ -14,6 +15,9 @@ class Plugin {
         Taxonomies\LieuTaxonomy::class,
         Taxonomies\ThematiqueTaxonomy::class,
         Taxonomies\JourTaxonomy::class,
+        Taxonomies\CreateurTaxonomy::class,
+        Taxonomies\GenreTaxonomy::class,
+        Taxonomies\StudioTaxonomy::class,
     ];
 
     public function boot(): void {
@@ -37,5 +41,6 @@ class Plugin {
 
     private function registerFields(): void {
         ( new Fields\EvenementFields() )->register();
+        ( new Fields\IndieGameFields() )->register();
     }
 }
