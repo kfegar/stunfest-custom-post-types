@@ -43,5 +43,6 @@ class Plugin {
     private function registerFields(): void {
         ( new Fields\EvenementFields() )->register();
         ( new Fields\IndieGameFields() )->register();
+        ( new Fields\ThematiqueFields() )->register();
     }
 }
