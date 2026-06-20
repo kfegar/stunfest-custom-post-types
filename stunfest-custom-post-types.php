@@ -10,6 +10,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+define( 'STUNFEST_CPT_FILE', __FILE__ );
+
 register_activation_hook( __FILE__, function (): void {
     if ( ! function_exists( 'acf_add_local_field_group' ) ) {
         deactivate_plugins( plugin_basename( __FILE__ ) );
