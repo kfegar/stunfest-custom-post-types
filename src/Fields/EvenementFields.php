@@ -44,6 +44,14 @@ class EvenementFields {
                     'display_format' => 'H:i',
                     'return_format'  => 'H:i',
                 ],
+                [
+                    'key'     => 'field_stunfest_evenement_mise_en_avant',
+                    'label'   => __( 'Mise en avant', 'stunfest-cpt' ),
+                    'name'    => 'mise_en_avant',
+                    'type'    => 'true_false',
+                    'message' => __( 'Afficher en premier dans la liste', 'stunfest-cpt' ),
+                    'ui'      => 1,
+                ],
             ],
             'location'              => [
                 [
