@@ -28,6 +28,7 @@ class Plugin {
             ( new Admin\EvenementColumns() )->register();
             ( new Admin\EvenementQuickEdit() )->register();
             ( new Admin\IndieGameColumns() )->register();
+            ( new Admin\IndieGameQuickEdit() )->register();
         }
     }
 
