@@ -18,6 +18,7 @@ class Plugin {
         Taxonomies\CreateurTaxonomy::class,
         Taxonomies\GenreTaxonomy::class,
         Taxonomies\StudioTaxonomy::class,
+        Taxonomies\PlatformTaxonomy::class,
     ];
 
     public function boot(): void {

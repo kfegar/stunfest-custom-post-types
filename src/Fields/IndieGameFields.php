@@ -10,10 +10,13 @@ class IndieGameFields {
             'title'                 => __( 'Détails du jeu', 'stunfest-cpt' ),
             'fields'                => [
                 [
-                    'key'   => 'field_stunfest_indiegame_platform',
-                    'label' => __( 'Plateforme', 'stunfest-cpt' ),
-                    'name'  => 'platform',
-                    'type'  => 'text',
+                    'key'   => 'field_stunfest_indiegame_year',
+                    'label' => __( 'Année', 'stunfest-cpt' ),
+                    'name'  => 'annee',
+                    'type'  => 'number',
+                    'min'   => 1970,
+                    'max'   => 2100,
+                    'step'  => 1,
                 ],
                 [
                     'key'   => 'field_stunfest_indiegame_url',

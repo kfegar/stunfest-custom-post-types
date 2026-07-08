@@ -18,10 +18,10 @@ class IndieGameQuickEdit extends AbstractQuickEdit {
 
     protected function fields(): array {
         return [
-            'platform'    => [
-                'label' => __( 'Plateforme', 'stunfest-cpt' ),
+            'annee'       => [
+                'label' => __( 'Année', 'stunfest-cpt' ),
                 'type'  => 'text',
-                'key'   => 'field_stunfest_indiegame_platform',
+                'key'   => 'field_stunfest_indiegame_year',
             ],
             'site_web'    => [
                 'label' => __( 'Site web', 'stunfest-cpt' ),

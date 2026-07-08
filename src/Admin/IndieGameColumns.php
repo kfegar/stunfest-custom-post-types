@@ -4,8 +4,8 @@ namespace Stunfest\CustomPostTypes\Admin;
 
 class IndieGameColumns {
 
-    private const META_COLUMNS = [ 'platform', 'site_web', 'description' ];
-    private const TAX_COLUMNS  = [ 'studio', 'genre', 'createur' ];
+    private const META_COLUMNS = [ 'annee', 'site_web', 'description' ];
+    private const TAX_COLUMNS  = [ 'studio', 'genre', 'createur', 'platform' ];
 
     public function register(): void {
         add_filter( 'manage_indiegame_posts_columns', $this->defineColumns( ... ) );
@@ -23,6 +23,7 @@ class IndieGameColumns {
         $columns['col_genre']       = __( 'Genre', 'stunfest-cpt' );
         $columns['col_createur']    = __( 'Créateur', 'stunfest-cpt' );
         $columns['col_platform']    = __( 'Plateforme', 'stunfest-cpt' );
+        $columns['col_year']        = __( 'Année', 'stunfest-cpt' );
         $columns['col_site_web']    = __( 'Site web', 'stunfest-cpt' );
         $columns['col_description'] = __( 'Description', 'stunfest-cpt' );
 
@@ -38,7 +39,8 @@ class IndieGameColumns {
             'col_studio'      => $this->renderTaxonomyColumn( $post_id, 'studio' ),
             'col_genre'       => $this->renderTaxonomyColumn( $post_id, 'genre' ),
             'col_createur'    => $this->renderTaxonomyColumn( $post_id, 'createur' ),
-            'col_platform'    => $this->renderMetaColumn( $post_id, 'platform' ),
+            'col_platform'    => $this->renderTaxonomyColumn( $post_id, 'platform' ),
+            'col_year'        => $this->renderMetaColumn( $post_id, 'annee' ),
             'col_site_web'    => $this->renderMetaColumn( $post_id, 'site_web' ),
             'col_description' => $this->renderDescriptionColumn( $post_id ),
             default           => null,
@@ -50,6 +52,7 @@ class IndieGameColumns {
         $columns['col_genre']       = 'genre';
         $columns['col_createur']    = 'createur';
         $columns['col_platform']    = 'platform';
+        $columns['col_year']        = 'annee';
         $columns['col_site_web']    = 'site_web';
         $columns['col_description'] = 'description';
 

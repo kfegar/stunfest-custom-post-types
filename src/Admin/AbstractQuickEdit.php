@@ -177,6 +177,6 @@ abstract class AbstractQuickEdit {
             return $value ? '1' : '0';
         }
 
-        return is_string( $value ) ? $value : '';
+        return is_scalar( $value ) ? (string) $value : '';
     }
 }
